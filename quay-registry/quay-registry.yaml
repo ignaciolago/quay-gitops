@@ -4,7 +4,7 @@ metadata:
   name: quay-registry
   namespace: quay-registry
 spec:
-  configBundleSecret: config-bundle-secret
+#  configBundleSecret: config-bundle-secret
   components:
     - managed: false
       kind: objectstorage
