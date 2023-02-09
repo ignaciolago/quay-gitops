@@ -2,7 +2,7 @@ apiVersion: quay.redhat.com/v1
 kind: QuayRegistry
 metadata:
   name: quay-registry
-  namespace: quay-registry
+  namespace: openshift-operators
 spec:
   components:
     - managed: true
