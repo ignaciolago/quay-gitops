@@ -1,0 +1,41 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: redhat-quay-instance
+spec:
+  destination:
+    name: ''
+    namespace: openshift-operators
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: quay-instance
+    repoURL: 'https://github.com/ignaciolago/quay-gitops.git'
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PruneLast=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: redhat-quay-operator
+spec:
+  destination:
+    name: ''
+    namespace: openshift-operators
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: quay-bundle
+    repoURL: 'https://github.com/ignaciolago/quay-gitops.git'
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PruneLast=true
