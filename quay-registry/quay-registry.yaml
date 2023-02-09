@@ -5,7 +5,7 @@ metadata:
   namespace: quay-registry
 spec:
   components:
-    - managed: false
+    - managed: true
       kind: objectstorage
     - managed: true
       kind: clair
