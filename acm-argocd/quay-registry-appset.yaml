@@ -23,7 +23,7 @@ spec:
         server: '{{server}}'
       project: default
       source:
-        path: quay-instance
+        path: quay-registry
         repoURL: https://github.com/ignaciolago/quay-gitops.git
         targetRevision: main
       syncPolicy:
