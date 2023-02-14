@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: redhat-odf-operator
+  name: redhat-quay-operator
 spec:
   destination:
     name: ''
-    namespace: openshift-operators
+    namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
-    path: odf-bundle
+    path: bootstrap/quay/operator
     repoURL: 'https://github.com/ignaciolago/quay-gitops.git'
     targetRevision: HEAD
   project: default

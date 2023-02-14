@@ -5,10 +5,10 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: openshift-operators
+    namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
-    path: quay-registry
+    path: bootstrap/quay/registry
     repoURL: 'https://github.com/ignaciolago/quay-gitops.git'
     targetRevision: HEAD
   project: default

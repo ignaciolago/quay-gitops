@@ -15,3 +15,5 @@ spec:
         storage: 50Gi
     storageClass: STORAGE-CLASS-NAME
   type: pv-pool
+
+#oc patch bucketclass noobaa-default-bucket-class --patch '{"spec":{"placementPolicy":{"tiers":[{"backingStores":["noobaa-pv-backing-store"]}]}}}' --type merge -n openshift-storage
