@@ -3,10 +3,12 @@ kind: Subscription
 metadata:
   name: openshift-gitops-operator
   namespace: openshift-operators
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   channel: latest
   installPlanApproval: Automatic
   name: openshift-gitops-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: openshift-gitops-operator.v1.7.1
+#  startingCSV: openshift-gitops-operator.v1.7.2
